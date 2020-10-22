@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/redirect/{service}','SocialController@redirect');
+
+Route::get('/callback/{service}','SocialController@callback');
 
 Auth::routes(['verify'=>true]);
 
