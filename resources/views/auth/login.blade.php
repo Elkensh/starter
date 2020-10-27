@@ -14,6 +14,8 @@
                         <div class="form-group row">
                             <label for="identify" class="col-md-4 col-form-label text-md-right">Email or Mobile</label>
 
+
+
                             <div class="col-md-6">
                                 <input id="identify" type="text" class="form-control @error('identify') is-invalid @enderror" name="identify" value="{{ old('email') }}" required autofocus>
 

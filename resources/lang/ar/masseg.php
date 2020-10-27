@@ -15,5 +15,6 @@ return [
 
     'hello ahmed' => 'اهلا احمد',
     'welcome' => 'مرحبا',
+    'offer name required' => 'ادخل اسم العرض',
 
 ];

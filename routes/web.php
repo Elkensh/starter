@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+use Mcamara\LaravelLocalization\LaravelLocalization;
 
 
 Route::get('/', function () {
@@ -24,4 +24,15 @@ Route::get('/callback/{service}','SocialController@callback');
 Auth::routes(['verify'=>true]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+
+Route::get('fillable ', 'CrudController@getOffers');
+
+Route::group(['prefix' => L], function () {
+    Route::group(['prefix' => 'offers'], function () {
+        // Route::get('store','CrudController@store');
+        Route::get('create', 'CrudController@create');
+        Route::post('store', 'CrudController@store')->name('offers.store');
+
+    });
+});
 
